@@ -1,0 +1,190 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/styles.css b/styles.css
+new file mode 100644
+index 0000000000000000000000000000000000000000..80141c210276a1b3ab6bbc9f5f45005bd1b6647f
+--- /dev/null
++++ b/styles.css
+@@ -0,0 +1,180 @@
++:root {
++  --bg: #f6f8fc;
++  --surface: #ffffff;
++  --text: #1d2738;
++  --muted: #5f6c80;
++  --primary: #4568f6;
++  --primary-dark: #2f4de0;
++  --shadow: 0 12px 28px rgba(40, 66, 145, 0.12);
++  --radius: 14px;
++}
++
++* {
++  box-sizing: border-box;
++}
++
++body {
++  margin: 0;
++  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
++  color: var(--text);
++  background: linear-gradient(180deg, #f9fbff 0%, var(--bg) 100%);
++  line-height: 1.6;
++}
++
++.site-header {
++  position: sticky;
++  top: 0;
++  z-index: 10;
++  background: rgba(255, 255, 255, 0.95);
++  backdrop-filter: blur(8px);
++  border-bottom: 1px solid #e8ecf4;
++}
++
++.navbar {
++  max-width: 1100px;
++  margin: 0 auto;
++  padding: 1rem 1.25rem;
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++  gap: 1rem;
++}
++
++.brand {
++  font-weight: 700;
++  font-size: 1.1rem;
++  color: var(--text);
++  text-decoration: none;
++}
++
++.nav-links {
++  list-style: none;
++  display: flex;
++  gap: 1rem;
++  margin: 0;
++  padding: 0;
++}
++
++.nav-links a {
++  color: var(--muted);
++  text-decoration: none;
++  font-weight: 500;
++}
++
++.nav-links a:hover,
++.nav-links a:focus-visible {
++  color: var(--primary);
++}
++
++.nav-toggle {
++  display: none;
++  border: 1px solid #d9e0ef;
++  background: var(--surface);
++  border-radius: 10px;
++  padding: 0.35rem 0.6rem;
++  font-size: 1rem;
++}
++
++.hero {
++  max-width: 1100px;
++  margin: 0 auto;
++  padding: 5.5rem 1.25rem 4rem;
++}
++
++.hero-content {
++  max-width: 660px;
++}
++
++.hero h1 {
++  margin: 0 0 1rem;
++  font-size: clamp(2rem, 4vw, 3.25rem);
++  line-height: 1.15;
++}
++
++.hero p {
++  margin: 0 0 1.75rem;
++  color: var(--muted);
++  font-size: 1.05rem;
++}
++
++.cta-button {
++  display: inline-block;
++  padding: 0.75rem 1.2rem;
++  border-radius: 10px;
++  background: var(--primary);
++  color: #fff;
++  text-decoration: none;
++  font-weight: 600;
++  box-shadow: var(--shadow);
++}
++
++.cta-button:hover,
++.cta-button:focus-visible {
++  background: var(--primary-dark);
++}
++
++.features {
++  max-width: 1100px;
++  margin: 0 auto;
++  padding: 1rem 1.25rem 4.5rem;
++}
++
++.features h2 {
++  font-size: clamp(1.5rem, 3vw, 2rem);
++  margin-bottom: 1.4rem;
++}
++
++.feature-grid {
++  display: grid;
++  grid-template-columns: repeat(3, minmax(0, 1fr));
++  gap: 1rem;
++}
++
++.feature-card {
++  background: var(--surface);
++  padding: 1.3rem;
++  border-radius: var(--radius);
++  box-shadow: var(--shadow);
++}
++
++.feature-card h3 {
++  margin: 0 0 0.5rem;
++  font-size: 1.05rem;
++}
++
++.feature-card p {
++  margin: 0;
++  color: var(--muted);
++}
++
++.site-footer {
++  border-top: 1px solid #e8ecf4;
++  padding: 1.4rem 1.25rem;
++  text-align: center;
++  color: var(--muted);
++  background: #fff;
++}
++
++@media (max-width: 840px) {
++  .feature-grid {
++    grid-template-columns: 1fr 1fr;
++  }
++}
++
++@media (max-width: 680px) {
++  .nav-toggle {
++    display: inline-block;
++  }
++
++  .nav-links {
++    display: none;
++  }
++
++  .hero {
++    padding-top: 4rem;
++  }
++
++  .feature-grid {
++    grid-template-columns: 1fr;
++  }
++}
+ 
+EOF
+)
