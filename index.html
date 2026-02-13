@@ -1,228 +1,426 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/index.html b/index.html
-index b5c1710945d7786caa0b033a99b6b80b99c5d287..8ffb2cadc0cd5e68aa5c1ce1228f5f703fd92dd2 100644
---- a/index.html
-+++ b/index.html
-@@ -1,70 +1,149 @@
-- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
--diff --git a/index.html b/index.html
--new file mode 100644
--index 0000000000000000000000000000000000000000..5591b5c86cb9de951d8a15956317fa43c6b930dc
----- /dev/null
--+++ b/index.html
--@@ -0,0 +1,60 @@
--+<!DOCTYPE html>
--+<html lang="en">
--+  <head>
--+    <meta charset="UTF-8" />
--+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
--+    <title>Modern Landing Page</title>
--+    <link rel="stylesheet" href="styles.css" />
--+  </head>
--+  <body>
--+    <header class="site-header">
--+      <nav class="navbar" aria-label="Primary navigation">
--+        <a class="brand" href="#home">BrightStart</a>
--+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
--+          ☰
--+        </button>
--+        <ul class="nav-links">
--+          <li><a href="#home">Home</a></li>
--+          <li><a href="#features">Features</a></li>
--+          <li><a href="#about">About</a></li>
--+          <li><a href="#contact">Contact</a></li>
--+        </ul>
--+      </nav>
--+    </header>
--+
--+    <main>
--+      <section id="home" class="hero" aria-labelledby="hero-title">
--+        <div class="hero-content">
--+          <h1 id="hero-title">Build faster with confidence</h1>
--+          <p>
--+            BrightStart helps teams launch polished products quickly with clean workflows and
--+            thoughtful tooling.
--+          </p>
--+          <a class="cta-button" href="#features">Explore Features</a>
--+        </div>
--+      </section>
--+
--+      <section id="features" class="features" aria-labelledby="features-title">
--+        <h2 id="features-title">Why teams choose BrightStart</h2>
--+        <div class="feature-grid">
--+          <article class="feature-card">
--+            <h3>Fast setup</h3>
--+            <p>Get from idea to implementation in minutes with an intuitive onboarding flow.</p>
--+          </article>
--+          <article class="feature-card">
--+            <h3>Collaborative by design</h3>
--+            <p>Keep everyone aligned with clear milestones, updates, and shared context.</p>
--+          </article>
--+          <article class="feature-card">
--+            <h3>Reliable performance</h3>
--+            <p>Deliver smooth user experiences at scale with modern best practices built in.</p>
--+          </article>
--+        </div>
--+      </section>
--+    </main>
--+
--+    <footer id="contact" class="site-footer">
--+      <p>&copy; 2026 BrightStart. All rights reserved.</p>
--+    </footer>
--+  </body>
--+</html>
-- 
--EOF
--)
 +<!DOCTYPE html>
 +<html lang="en">
 +  <head>
 +    <meta charset="UTF-8" />
 +    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-+    <title>Vanguard FP&A | Executive Overview</title>
++    <title>Modern Landing Page</title>
 +    <link rel="stylesheet" href="styles.css" />
 +  </head>
 +  <body>
 +    <header class="site-header">
-+      <div class="container">
-+        <nav class="navbar" aria-label="Primary navigation">
-+          <a class="brand" href="#top">Vanguard FP&amp;A</a>
-+          <ul class="nav-links">
-+            <li><a href="#mandate">Mandate</a></li>
-+            <li><a href="#planning">Planning Cycle</a></li>
-+            <li><a href="#analytics">Analytics</a></li>
-+            <li><a href="#governance">Governance</a></li>
-+            <li><a href="#model">Operating Model</a></li>
-+          </ul>
-+        </nav>
-+      </div>
++      <nav class="navbar" aria-label="Primary navigation">
++        <a class="brand" href="#home">BrightStart</a>
++        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
++          ☰
++        </button>
++        <ul class="nav-links">
++          <li><a href="#home">Home</a></li>
++          <li><a href="#features">Features</a></li>
++          <li><a href="#about">About</a></li>
++          <li><a href="#contact">Contact</a></li>
++        </ul>
++      </nav>
 +    </header>
 +
-+    <main id="top">
-+      <section class="hero" aria-labelledby="hero-title">
-+        <div class="container">
-+          <p class="kicker">Executive Brief</p>
-+          <h1 id="hero-title">Financial Planning &amp; Analysis at Vanguard</h1>
-+          <p class="lead">
-+            FP&amp;A enables disciplined growth by aligning strategy, resource allocation, risk oversight,
-+            and performance accountability across the enterprise.
++    <main>
++      <section id="home" class="hero" aria-labelledby="hero-title">
++        <div class="hero-content">
++          <h1 id="hero-title">Build faster with confidence</h1>
++          <p>
++            BrightStart helps teams launch polished products quickly with clean workflows and
++            thoughtful tooling.
 +          </p>
-+          <div class="hero-highlights" role="list" aria-label="FP&A outcomes">
-+            <p role="listitem"><strong>Clear priorities:</strong> Capital and expense deployed to highest-value initiatives.</p>
-+            <p role="listitem"><strong>Forward visibility:</strong> Rolling forecasts anticipate changes early.</p>
-+            <p role="listitem"><strong>Decision quality:</strong> Leadership receives concise, action-oriented insights.</p>
-+          </div>
++          <a class="cta-button" href="#features">Explore Features</a>
 +        </div>
 +      </section>
 +
-+      <section id="mandate" class="section" aria-labelledby="mandate-title">
-+        <div class="container">
-+          <h2 id="mandate-title">FP&amp;A Mandate</h2>
-+          <div class="cards three-up">
-+            <article class="card">
-+              <h3>Strategy Translation</h3>
-+              <p>Convert long-term enterprise objectives into measurable financial and operating commitments.</p>
-+            </article>
-+            <article class="card">
-+              <h3>Performance Stewardship</h3>
-+              <p>Track value creation through growth, efficiency, service quality, and risk-adjusted outcomes.</p>
-+            </article>
-+            <article class="card">
-+              <h3>Capital Discipline</h3>
-+              <p>Ensure investments are governed by clear business cases, scenario testing, and accountability.</p>
-+            </article>
-+          </div>
-+        </div>
-+      </section>
-+
-+      <section id="planning" class="section tone" aria-labelledby="planning-title">
-+        <div class="container">
-+          <h2 id="planning-title">Planning &amp; Forecasting Cycle</h2>
-+          <div class="cards two-up">
-+            <article class="card">
-+              <h3>Long-Range Planning (3-5 Years)</h3>
-+              <p>Define strategic trajectory by line of business with revenue, margin, cost, and capacity envelopes.</p>
-+            </article>
-+            <article class="card">
-+              <h3>Annual Operating Plan</h3>
-+              <p>Set baseline commitments with quarterly phasing, assumptions, and executable ownership.</p>
-+            </article>
-+            <article class="card">
-+              <h3>Rolling Reforecast</h3>
-+              <p>Refresh outlook monthly or quarterly using key drivers: market movements, net flows, pricing, and productivity.</p>
-+            </article>
-+            <article class="card">
-+              <h3>Variance &amp; Action</h3>
-+              <p>Diagnose plan-to-actual gaps, quantify impacts, and assign corrective actions with clear timelines.</p>
-+            </article>
-+          </div>
-+        </div>
-+      </section>
-+
-+      <section id="analytics" class="section" aria-labelledby="analytics-title">
-+        <div class="container">
-+          <h2 id="analytics-title">Executive Analytics &amp; Reporting</h2>
-+          <div class="cards three-up">
-+            <article class="card">
-+              <h3>KPI Architecture</h3>
-+              <p>Maintain a balanced scorecard spanning growth, cost efficiency, client outcomes, and risk indicators.</p>
-+            </article>
-+            <article class="card">
-+              <h3>Leadership Reviews</h3>
-+              <p>Deliver monthly review packs with trend context, outlook implications, and priority decisions.</p>
-+            </article>
-+            <article class="card">
-+              <h3>Decision Support</h3>
-+              <p>Provide scenario-based recommendations, including upside/downside sensitivities and trade-offs.</p>
-+            </article>
-+          </div>
-+        </div>
-+      </section>
-+
-+      <section id="governance" class="section tone" aria-labelledby="governance-title">
-+        <div class="container">
-+          <h2 id="governance-title">Governance &amp; Risk Integration</h2>
-+          <ul class="checklist">
-+            <li><strong>Investment gates:</strong> Standardized approval checkpoints from concept through realization.</li>
-+            <li><strong>Control rigor:</strong> Transparent assumptions, auditable models, and consistent data definitions.</li>
-+            <li><strong>Scenario readiness:</strong> Base, upside, and downside views to support resilient decisions.</li>
-+            <li><strong>Execution tracking:</strong> Benefits realization monitored against original business cases.</li>
-+          </ul>
-+        </div>
-+      </section>
-+
-+      <section id="model" class="section" aria-labelledby="model-title">
-+        <div class="container">
-+          <h2 id="model-title">Operating Model</h2>
-+          <div class="cards two-up">
-+            <article class="card">
-+              <h3>Business FP&amp;A Partners</h3>
-+              <p>Embedded with each division to align local plans with enterprise priorities and outcomes.</p>
-+            </article>
-+            <article class="card">
-+              <h3>Corporate FP&amp;A</h3>
-+              <p>Consolidates performance, shapes executive narratives, and informs enterprise trade-off decisions.</p>
-+            </article>
-+            <article class="card">
-+              <h3>Analytics &amp; Systems Team</h3>
-+              <p>Improves forecast accuracy and cycle speed through automation, dashboarding, and model governance.</p>
-+            </article>
-+            <article class="card">
-+              <h3>Monthly Rhythm</h3>
-+              <p>Close → Analyze → Reforecast → Review → Act, with explicit owners and measurable follow-through.</p>
-+            </article>
-+          </div>
++      <section id="features" class="features" aria-labelledby="features-title">
++        <h2 id="features-title">Why teams choose BrightStart</h2>
++        <div class="feature-grid">
++          <article class="feature-card">
++            <h3>Fast setup</h3>
++            <p>Get from idea to implementation in minutes with an intuitive onboarding flow.</p>
++          </article>
++          <article class="feature-card">
++            <h3>Collaborative by design</h3>
++            <p>Keep everyone aligned with clear milestones, updates, and shared context.</p>
++          </article>
++          <article class="feature-card">
++            <h3>Reliable performance</h3>
++            <p>Deliver smooth user experiences at scale with modern best practices built in.</p>
++          </article>
 +        </div>
 +      </section>
 +    </main>
 +
-+    <footer class="site-footer">
-+      <div class="container">
-+        <p>Vanguard FP&amp;A — executive overview of mandate, planning cadence, governance, and enterprise performance management.</p>
-+      </div>
++    <footer id="contact" class="site-footer">
++      <p>&copy; 2026 BrightStart. All rights reserved.</p>
 +    </footer>
 +  </body>
 +</html>
  
 EOF
 )
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanguard FP&amp;A | Executive Landing Page</title>
+    <style>
+      :root {
+        --bg: #f4f6fa;
+        --surface: #ffffff;
+        --surface-soft: #eef2f8;
+        --text: #16243a;
+        --muted: #4e5f7c;
+        --accent: #a8102e;
+        --border: #d9e1ef;
+        --shadow: 0 10px 28px rgba(21, 39, 72, 0.08);
+        --radius: 14px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: min(1120px, 92%);
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(255, 255, 255, 0.97);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(6px);
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.95rem 0;
+      }
+
+      .brand {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 0.95rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 0.94rem;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: var(--accent);
+      }
+
+      .hero {
+        padding: 4.8rem 0 3rem;
+      }
+
+      .kicker {
+        margin: 0 0 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 0.74rem;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4.2vw, 3rem);
+        line-height: 1.2;
+        max-width: 21ch;
+      }
+
+      .lead {
+        margin: 1rem 0 0;
+        max-width: 72ch;
+        color: var(--muted);
+        font-size: 1.04rem;
+      }
+
+      .hero-grid {
+        margin-top: 1.35rem;
+        display: grid;
+        gap: 0.85rem;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .hero-note {
+        margin: 0;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.85rem 0.95rem;
+        box-shadow: var(--shadow);
+        color: var(--muted);
+      }
+
+      .section {
+        padding: 1.7rem 0 3rem;
+      }
+
+      .section.alt {
+        background: var(--surface-soft);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      h2 {
+        margin: 0 0 1rem;
+        font-size: clamp(1.35rem, 2.6vw, 1.95rem);
+      }
+
+      .cards {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .cards.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cards.three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.05rem;
+        box-shadow: var(--shadow);
+      }
+
+      .card h3 {
+        margin: 0 0 0.45rem;
+        font-size: 1.02rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .checklist {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      .checklist li {
+        margin-bottom: 0.7rem;
+        color: var(--muted);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--border);
+        background: #fff;
+        padding: 1.2rem 0;
+      }
+
+      .site-footer p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      @media (max-width: 980px) {
+        .hero-grid,
+        .cards.three {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .hero-grid,
+        .cards.two,
+        .cards.three {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding-top: 3.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="brand" href="#top">Vanguard FP&amp;A</a>
+          <ul class="nav-links">
+            <li><a href="#mandate">Mandate</a></li>
+            <li><a href="#cycle">Planning Cycle</a></li>
+            <li><a href="#reporting">Reporting</a></li>
+            <li><a href="#governance">Governance</a></li>
+            <li><a href="#model">Operating Model</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container">
+          <p class="kicker">Executive Overview</p>
+          <h1 id="hero-title">Financial Planning &amp; Analysis at Vanguard</h1>
+          <p class="lead">
+            FP&amp;A aligns strategic priorities to financial outcomes through integrated planning,
+            rolling forecasts, governance discipline, and concise executive decision support.
+          </p>
+          <div class="hero-grid" role="list" aria-label="FP&A value outcomes">
+            <p class="hero-note" role="listitem"><strong>Strategic clarity:</strong> Resources focused on highest-value initiatives.</p>
+            <p class="hero-note" role="listitem"><strong>Forward visibility:</strong> Risk and performance signals identified early.</p>
+            <p class="hero-note" role="listitem"><strong>Decision velocity:</strong> Leadership receives clear actions, not just data.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="mandate" class="section" aria-labelledby="mandate-title">
+        <div class="container">
+          <h2 id="mandate-title">FP&amp;A Mandate</h2>
+          <div class="cards three">
+            <article class="card">
+              <h3>Strategy Translation</h3>
+              <p>Convert enterprise objectives into measurable revenue, cost, capital, and productivity commitments.</p>
+            </article>
+            <article class="card">
+              <h3>Performance Stewardship</h3>
+              <p>Monitor growth, efficiency, and client outcomes with balanced KPIs and consistent accountability.</p>
+            </article>
+            <article class="card">
+              <h3>Capital Discipline</h3>
+              <p>Evaluate investments through transparent business cases, stage gates, and benefits realization.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="cycle" class="section alt" aria-labelledby="cycle-title">
+        <div class="container">
+          <h2 id="cycle-title">Planning &amp; Forecasting Cycle</h2>
+          <div class="cards two">
+            <article class="card">
+              <h3>Long-Range Plan (3-5 Years)</h3>
+              <p>Define multi-year trajectory by business segment with strategic assumptions and target envelopes.</p>
+            </article>
+            <article class="card">
+              <h3>Annual Operating Plan</h3>
+              <p>Set annual commitments with quarterly phasing, ownership, and measurable execution priorities.</p>
+            </article>
+            <article class="card">
+              <h3>Rolling Reforecast</h3>
+              <p>Refresh full-year outlooks using key drivers including markets, flows, pricing, and productivity.</p>
+            </article>
+            <article class="card">
+              <h3>Variance-to-Action</h3>
+              <p>Quantify root causes, assess implications, and assign corrective actions with explicit timelines.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="reporting" class="section" aria-labelledby="reporting-title">
+        <div class="container">
+          <h2 id="reporting-title">Executive Reporting &amp; Analytics</h2>
+          <div class="cards three">
+            <article class="card">
+              <h3>KPI Architecture</h3>
+              <p>Balanced scorecard of growth, cost efficiency, client outcomes, and risk-adjusted performance.</p>
+            </article>
+            <article class="card">
+              <h3>Leadership Reviews</h3>
+              <p>Monthly review packs with trend context, outlook changes, and decisions required.</p>
+            </article>
+            <article class="card">
+              <h3>Scenario Insights</h3>
+              <p>Base, upside, and downside sensitivity analysis to support resilient trade-off decisions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="governance" class="section alt" aria-labelledby="governance-title">
+        <div class="container">
+          <h2 id="governance-title">Governance &amp; Risk Integration</h2>
+          <ul class="checklist">
+            <li><strong>Investment governance:</strong> Standardized checkpoints from concept to delivery.</li>
+            <li><strong>Control rigor:</strong> Auditable assumptions, model governance, and consistent data definitions.</li>
+            <li><strong>Scenario readiness:</strong> Practical contingency views for changing market and business conditions.</li>
+            <li><strong>Outcome tracking:</strong> Benefit realization monitored against approved business cases.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="model" class="section" aria-labelledby="model-title">
+        <div class="container">
+          <h2 id="model-title">Operating Model</h2>
+          <div class="cards two">
+            <article class="card">
+              <h3>Business FP&amp;A Partners</h3>
+              <p>Embed with divisions to shape plans and challenge assumptions near execution.</p>
+            </article>
+            <article class="card">
+              <h3>Corporate FP&amp;A</h3>
+              <p>Consolidate enterprise views and guide strategic trade-off discussions with leadership.</p>
+            </article>
+            <article class="card">
+              <h3>Analytics &amp; Systems</h3>
+              <p>Increase forecast accuracy and cycle speed via automation, data quality, and dashboards.</p>
+            </article>
+            <article class="card">
+              <h3>Monthly Cadence</h3>
+              <p>Close → Analyze → Reforecast → Review → Act, with named owners and tracked actions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Vanguard FP&amp;A | Executive landing page covering mandate, planning cadence, governance, and performance management.</p>
+      </div>
+    </footer>
+  </body>
+</html>
